@@ -3,9 +3,25 @@ import logo from '/images/logo3.png';
 import { MdDarkMode, MdOutlineWbSunny  } from "react-icons/md";
 import { CgMenu } from "react-icons/cg";
 import Resume from '../assets/Joshua Blasco - Resume.pdf'
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 
 const Navbar = () => {
+  const scrollToSkillSection = () => {
+    scroll.scrollTo('#skill-section', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    });
+  };
+
+  const scrollToProjectSection = () => {
+    scroll.scrollTo('#project-section', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    });
+  };
 
   const [darkBG, setDarkBG] = useState(false);
 
@@ -32,8 +48,31 @@ const Navbar = () => {
           {toggle  ? 
                 <div className='ssm:flex ssm:flex-col md:flex-row mx-5 '>
                   {darkBG ? <MdOutlineWbSunny  className='cursor-pointer hover:scale-110' onClick={toggleDarkMode}/> : <MdDarkMode className='cursor-pointer hover:scale-110' onClick={toggleDarkMode}/>} 
-                  <a href="#" className="hover:scale-110 rounded-full px-5 py-2 text-xl ">Skills</a>
-                  <a href="#" className="hover:scale-110 rounded-full px-5 py-2 text-xl">Projects</a>
+                  <Link
+                    activeClass="active"
+                    to="skill-section"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={800}
+                    onClick={scrollToSkillSection}
+                    className="hover:scale-110 rounded-full px-5 py-2 text-xl cursor-pointer " 
+                  >
+                    Skills
+                  </Link>
+                  
+                  <Link
+                    activeClass="active"
+                    to="project-section"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={800}
+                    onClick={scrollToProjectSection}
+                    className="hover:scale-110 rounded-full px-5 py-2 text-xl cursor-pointer " 
+                  >
+                    Projects
+                  </Link>
                   <button className='m-auto flex p-2 rounded bg-gradient-to-r from-orange-300 to-amber-500 hover:scale-105 text-xl'><a href={Resume} download='Resume'>Resume</a></button>
                 </div> 
               : <div>       
@@ -42,9 +81,32 @@ const Navbar = () => {
                     {darkBG ? <MdOutlineWbSunny  className='cursor-pointer  w-10 h-10 hover:scale-110' onClick={toggleDarkMode}/> : <MdDarkMode className='cursor-pointer w-10 h-10 hover:scale-110' onClick={toggleDarkMode}/>}
                   </div>
                   <div className='flex'>
-                    <a href="#" className="hover:scale-110 rounded-full px-5 py-2 text-xl ">Skills</a>
-                    <a href="#" className="hover:scale-110 rounded-full px-5 py-2 text-xl">Projects</a>
-                    <button className='px-2 rounded bg-gradient-to-r from-orange-300 to-amber-500 hover:scale-105 text-xl '><a href={Resume} download='Resume'>Resume</a></button>
+                    <Link
+                    activeClass="active"
+                    to="skill-section"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={800}
+                    onClick={scrollToSkillSection}
+                    className="hover:scale-110 rounded-full px-5 py-2 text-xl cursor-pointer " 
+                  >
+                    Skills
+                  </Link>
+                  
+                  <Link
+                    activeClass="active"
+                    to="project-section"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={800}
+                    onClick={scrollToProjectSection}
+                    className="hover:scale-110 rounded-full px-5 py-2 text-xl cursor-pointer " 
+                  >
+                    Projects
+                  </Link>
+                    <button className='px-2 rounded bg-gradient-to-r from-orange-300 to-amber-500 hover:scale-105 text-xl '><a href={Resume} download='Joshua Blasco - Resume'>Resume</a></button>
                   </div>
                 </div>  
               </div>

@@ -10,7 +10,7 @@ import mongo from '../assets/mongo.png'
 
 const Skills = () => {
   return (
-    <div>
+    <div id="skill-section">
         <h1 className='font-bold text-3xl text-center mb-3 bg-orange-300 w-40 m-auto rounded text-orange-500'>Skills</h1>
         <div className='grid grid-cols-2 m-auto items-center justify-items-center mb-10 md:grid-cols-4 max-w-screen-lg'>
                     <div className='relative before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:top-1 before:w-max before:max-w-xs before:-translate-x-1/2 before:-translate-y-full before:bg-orange-700 before:text-white before:rounded-md before:opacity-0 before:transition-all after:absolute after:left-1/2 after:top-1 after:h-0 after:w-0 after:-translate-x-1/2 after:border-spacing-8 after:border-t-orange-700 after:border-l-transparent after:border-b-transparent after:border-r-transparent after:opacity-0 after:transition-all hover:before:opacity-100 hover:after:opacity-100 ' data-tip='HTML'>

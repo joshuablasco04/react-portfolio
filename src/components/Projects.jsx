@@ -10,7 +10,7 @@ import mongo from '../assets/mongo.png'
 
 const Projects = () => {
   return (
-    <div className='relative flex flex-col items-center my-10 '>
+    <div className='relative flex flex-col items-center my-14 ' id="project-section">
         <h2 className='font-bold text-3xl text-center mb-3 bg-orange-300 w-40 m-auto rounded text-orange-500 '>Project</h2>
         <div className='bg-white w-96 p-5 text-center rounded-3xl group hover:bg-gradient-to-t from-gray-200 to-orange-500'>
             <img src={chLead} alt="" className='group-hover:opacity-10'/>

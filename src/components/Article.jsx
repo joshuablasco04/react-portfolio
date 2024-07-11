@@ -11,14 +11,11 @@ const Article = () => {
         <img src={profile} alt="PHOTO" width={400} className='rounded-full w-80 h-80 bg-gradient-to-b from-orange-600'/>
       </div>
       <div className=' w-full flex flex-col items-center justify-center font-serif m-auto'>
-        <h2 className='text-4xl font-bold justify-center flex flex-col items-center'>
-          <h2>I'm <span className='text-orange-400'> Joshua Blasco </span></h2>
-          
-
-          
+        <div className='text-4xl font-bold justify-center flex flex-col items-center'>
+          <h3>I'm <span className='text-orange-400'> Joshua Blasco </span></h3>
+          <h3>
           <TypeAnimation
             sequence={[
-            
             `Frontend Developer`,
             1000,
             `Backend Developer`,
@@ -32,8 +29,8 @@ const Article = () => {
           repeat={Infinity}
         />
         
-
-        </h2>
+        </h3>
+        </div>
         <br />
         <p className=' text-center mx-10 border-y-4 py-2 mb-5 md:border-none'>
           A dedicated Mechanical Engineer with a fervent interest in transitioning into the field of web development. Possesses proficiency in key technologies including HTML, CSS, JavaScript, Node, ExpressJS, MongoDB, and ReactJS. Demonstrates the ability to contribute effectively within a collaborative work environment, eager to acquire new knowledge and experiences in the realm of web development.

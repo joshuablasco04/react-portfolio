@@ -9,6 +9,8 @@ import CodingExercise from './components/CodingExercise'
 
 
 function App() {
+  const skills = 'skills';
+  const projects = 'projects'
 
   
   return (
@@ -20,10 +22,10 @@ function App() {
         <section>
           <Article />
         </section>
-        <section>
+        <section > 
           <Skills />
         </section>
-        <section>
+        <section >
           <Projects />
         </section>
         <section>
