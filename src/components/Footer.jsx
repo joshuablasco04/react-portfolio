@@ -9,13 +9,13 @@ const Footer = () => {
             <h2 className='text-2xl font-semibold mb-3'>Contact</h2>
             <div className='grid  grid-cols-2 gap-x-30 gap-y-2 md:gap-x-56'>
                 <div className='flex align-center'>
-                    <CiMail className=' mr-3' size={25}/> <span>joshuablasco04@gmail.com</span>
+                    <CiMail className=' mr-2' size={25}/> <span>joshuablasco04@gmail.com</span>
                 </div>
                 <div className='flex justify-end'>
-                    <CiLinkedin className=' mr-3 ' size={25}/> <a href='https://www.linkedin.com/in/joshua-blasco' target='_blank' ><span>Joshua Blasco</span></a>
+                    <CiLinkedin className=' mr-2 ' size={25}/> <a href='https://www.linkedin.com/in/joshua-blasco' target='_blank' ><span>Joshua Blasco</span></a>
                 </div>
                 <div className='flex'>
-                    <CiMobile3 className=' mr-3' size={25}/> <span>+63-977-353-1173</span>
+                    <CiMobile3 className=' mr-2' size={25}/> <span>+63-977-353-1173</span>
                 </div>
             </div>
             <div className='text-center'>

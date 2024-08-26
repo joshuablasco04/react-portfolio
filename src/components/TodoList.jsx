@@ -1,23 +1,34 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const TodoList = () => {
 
   const [todos, setTodos] = useState([]);
-  const [newTodos, setNewTodos] = useState('')
-  const [isChecked, setIsChecked] = useState(false)
+  const [newTodos, setNewTodos] = useState('');
+
+ useEffect(() => {
+    const localTodos = localStorage.getItem('todos');
+    if (localTodos) {
+      setTodos(JSON.parse(localTodos));
+    }
+  }, []);
 
   const handleAddTodo = (e) => {
     e.preventDefault()
     if(newTodos !== ''){
-      setTodos([newTodos, ...todos])
+      setTodos( ()=> {
+        const updatedTodos = [newTodos, ...todos];
+        localStorage.setItem("todos", JSON.stringify(updatedTodos));
+        return updatedTodos;
+      }  
+      )
     }
-    setNewTodos('')
+    setNewTodos('');
   }
 
   const handleDelete = (index) => {
-        const newTodos = [...todos]
-        newTodos.splice(index)
-        setTodos(newTodos)
+    const updatedTodos = todos.splice(index, 1);
+    setTodos(todos.filter(()=> updatedTodos));
+    localStorage.setItem("todos", JSON.stringify(todos));     
   }
 
 
