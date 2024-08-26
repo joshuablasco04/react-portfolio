@@ -9,14 +9,14 @@ const TodoList = () => {
   const handleAddTodo = (e) => {
     e.preventDefault()
     if(newTodos !== ''){
-      setTodos([...todos, newTodos])
+      setTodos([newTodos, ...todos])
     }
     setNewTodos('')
   }
 
-  const handleDelete = (key) => {
+  const handleDelete = (index) => {
         const newTodos = [...todos]
-        newTodos.splice(key, 1)
+        newTodos.splice(index)
         setTodos(newTodos)
   }
 
@@ -33,8 +33,8 @@ const TodoList = () => {
         <ul className=' border-black mt-3'>
           {todos.map((todo,index) => 
             <li key={index} className='flex justify-between' >
-              <span >{todo}</span>
-            <button onClick={handleDelete} className='bg-red-500 p-1 rounded-sm mt-1 items-center'>Delete</button>
+              <span>{todo}</span>
+            <button onClick={()=> handleDelete(index)} className='bg-red-500 p-1 rounded-sm mt-1 items-center'>Delete</button>
             </li>
           )}
           
