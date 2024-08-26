@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className='bg-orange-300 p-4'>
         <div className='flex flex-col m-auto max-w-screen-lg items-center '>
             <h2 className='text-2xl font-semibold mb-3'>Contact</h2>
-            <div className='grid  grid-cols-2 gap-x-30 gap-y-2 md:gap-x-56'>
+            <div className='grid  grid-cols-2 gap-x-26 gap-y-2 md:gap-x-56'>
                 <div className='flex align-center'>
                     <CiMail className=' mr-2' size={25}/> <span>joshuablasco04@gmail.com</span>
                 </div>
